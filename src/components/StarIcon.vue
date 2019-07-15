@@ -5,9 +5,12 @@
     :width="starSize"
     :height="starSize"
     alt=""
+    role="button"
+    tabindex="0"
     @mouseover="setRateVisualValue"
     @mouseout="resetRateVisualValue"
     @click="setRateValue"
+    @keypress="handleBtnKeyPress"
   >
 </template>
 
@@ -79,6 +82,13 @@ export default Vue.extend({
         this.rate.set(this.index);
         this.rate.setVisualValue(this.index);
         this.$emit('update-rate-value');
+      }
+    },
+
+    handleBtnKeyPress(e) {
+      if (e.key === ' ' || e.key.toUpperCase() === 'ENTER') {
+        e.preventDefault();
+        this.setRateValue();
       }
     },
   },
