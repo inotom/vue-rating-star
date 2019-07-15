@@ -66,16 +66,16 @@ export default {
 
 ## Props
 
-| name            | type      | defaults | description                    |
-|-----------------|-----------|----------|--------------------------------|
-| `:max-value     | `Number`  | `5`      | Number of stars                |
-| `:initial-value | `Number`  | `0`      | Initial rating number          |
-| `:star-size`    | `Number`  | `30`     | Star icon width/height         |
-| `color`         | `String`  | `ffcc00` | Star icon color                |
-| `bg-color`      | `String`  | `cccccc` | Star icon background-color     |
-| `stroke-color`  | `String`  | `000000` | Star icon stroke color         |
-| `:has-stroke`   | `Boolean` | `false`  | Enable star icon stroke        |
-| `:is-readonly`  | `Boolean` | `false`  | Disable rating status changing |
+| name             | type      | defaults | description                    |
+|------------------|-----------|----------|--------------------------------|
+| `:max-value`     | `Number`  | `5`      | Number of stars                |
+| `:initial-value` | `Number`  | `0`      | Initial rating number          |
+| `:star-size`     | `Number`  | `30`     | Star icon width/height         |
+| `color`          | `String`  | `ffcc00` | Star icon color                |
+| `bg-color`       | `String`  | `cccccc` | Star icon background-color     |
+| `stroke-color`   | `String`  | `000000` | Star icon stroke color         |
+| `:has-stroke`    | `Boolean` | `false`  | Enable star icon stroke        |
+| `:is-readonly`   | `Boolean` | `false`  | Disable rating status changing |
 
 
 ## License
