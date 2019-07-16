@@ -55,6 +55,9 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
     },
   },
+  externals: {
+    vue: 'Vue',
+  },
   optimization: {
     minimize: false,
   },
