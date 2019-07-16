@@ -65,19 +65,19 @@ export default Vue.extend({
   },
 
   methods: {
-    setRateVisualValue() {
+    setRateVisualValue(): void {
       if (!this.isReadonly) {
         this.rate.setVisualValue(this.index);
       }
     },
 
-    resetRateVisualValue() {
+    resetRateVisualValue(): void {
       if (!this.isReadonly) {
         this.rate.setVisualValue(void(0));
       }
     },
 
-    setRateValue() {
+    setRateValue(): void {
       if (!this.isReadonly) {
         this.rate.set(this.index);
         this.rate.setVisualValue(this.index);
@@ -85,7 +85,7 @@ export default Vue.extend({
       }
     },
 
-    handleBtnKeyPress(e) {
+    handleBtnKeyPress(e): void {
       if (e.key === ' ' || e.key.toUpperCase() === 'ENTER') {
         e.preventDefault();
         this.setRateValue();

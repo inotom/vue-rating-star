@@ -92,7 +92,7 @@ export default Vue.extend({
   },
 
   methods: {
-    updateRateValue() {
+    updateRateValue(): void {
       this.$emit('input', this.rate.get());
     },
   },
