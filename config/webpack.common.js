@@ -52,7 +52,7 @@ module.exports = {
       '@components': path.resolve(__dirname, '..', 'src', 'components'),
       '@helpers': path.resolve(__dirname, '..', 'src', 'helpers'),
       '@models': path.resolve(__dirname, '..', 'src', 'models'),
-      vue$: 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.runtime.esm.js',
     },
   },
   externals: {
