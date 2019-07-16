@@ -1,6 +1,6 @@
 {
   "name": "@inotom/vue-rating-star",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/vue-rating-star.umd.js",
   "cdn": "dist/vue-rating-star.min.js",
