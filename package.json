@@ -2,7 +2,7 @@
   "name": "@inotom/vue-rating-star",
   "version": "1.0.4",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/vue-rating-star.umd.js",
   "cdn": "dist/vue-rating-star.min.js",
   "config": {
     "dist_dir": "dist",
