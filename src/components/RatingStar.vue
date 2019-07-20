@@ -26,13 +26,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
+<script>
 import { Rate, MAX_RATE } from '@models/Rate';
 import StarIcon from '@components/StarIcon.vue';
 import { getStrokeSvg } from '@helpers/stars';
 
-export default Vue.extend({
+export default {
   components: {
     StarIcon,
   },
@@ -86,17 +85,17 @@ export default Vue.extend({
   },
 
   computed: {
-    strokeSvg(): string {
+    strokeSvg() {
       return getStrokeSvg(this.strokeColor);
     },
   },
 
   methods: {
-    updateRateValue(): void {
+    updateRateValue() {
       this.$emit('input', this.rate.get());
     },
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>

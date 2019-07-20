@@ -14,12 +14,11 @@
   >
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
+<script>
 import { Rate } from '@models/Rate';
 import { getSvg, getStarValue } from '@helpers/stars';
 
-export default Vue.extend({
+export default {
   props: {
     starSize: {
       type: Number,
@@ -59,25 +58,25 @@ export default Vue.extend({
   },
 
   computed: {
-    svg(): string {
+    svg() {
       return getSvg(getStarValue(this.index, this.rate.getVisualValue()), this.color, this.bgColor);
     },
   },
 
   methods: {
-    setRateVisualValue(): void {
+    setRateVisualValue() {
       if (!this.isReadonly) {
         this.rate.setVisualValue(this.index);
       }
     },
 
-    resetRateVisualValue(): void {
+    resetRateVisualValue() {
       if (!this.isReadonly) {
         this.rate.setVisualValue(void(0));
       }
     },
 
-    setRateValue(): void {
+    setRateValue() {
       if (!this.isReadonly) {
         this.rate.set(this.index);
         this.rate.setVisualValue(this.index);
@@ -85,14 +84,14 @@ export default Vue.extend({
       }
     },
 
-    handleBtnKeyPress(e): void {
+    handleBtnKeyPress(e) {
       if (e.key === ' ' || e.key.toUpperCase() === 'ENTER') {
         e.preventDefault();
         this.setRateValue();
       }
     },
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>
