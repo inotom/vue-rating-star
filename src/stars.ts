@@ -17,11 +17,7 @@ export const getStarValue = (index: number, rateValue: number): number => {
   return 0;
 };
 
-export const getSvg = (
-  value: number,
-  color: string,
-  bgColor: string
-): string => {
+export const getSvg = (value: number, color: string, bgColor: string): string => {
   switch (value) {
     case 1:
       return `data:image/svg+xml;charset=utf8, %3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22%3E%3Cpolygon fill=%22%23${bgColor}%22 points=%2212,2 9.19,8.63 4,9.07 4,10.973 7.46,13.97 5.82,21 12,17.27 18.18,21 16.54,13.97 22,9.24 14.811,8.63 %22/%3E%3Cpolygon fill=%22%23${color}%22 points=%224,9.07 2,9.24 4,10.973 %22/%3E%3C/svg%3E`;
