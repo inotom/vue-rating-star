@@ -2,10 +2,11 @@
 
 Rating star icon, Vue.js component.
 
+From v2.0.0, it works for Vue 3.
 
 ## Demo
 
-[Demo](http://sandbox.serendip.ws/vue-rating-star.html)
+[Demo](https://sandbox.serendip.ws/vue-rating-star.html)
 
 
 ## Install
@@ -13,15 +14,15 @@ Rating star icon, Vue.js component.
 ### Browser
 
 ```html
-<script src="vue.js"></script>
-<script src="vue-rating-star.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="vue-rating-star.umd.js"></script>
 ```
 
 
 ### npm
 
 ```
-npm install -D @inotom/vue-rating-star
+npm install --save @inotom/vue-rating-star
 ```
 
 
@@ -34,32 +35,30 @@ npm install -D @inotom/vue-rating-star
   <rating-star></rating-star>
 </div>
 
-<script src="vue.js"></script>
-<script src="vue-rating-star.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="vue-rating-star.umd.js"></script>
 <script>
-Vue.use(RatingStar);
-new Vue({
-  el: '#app',
-});
+const { createApp } = Vue;
+const { RatingStar } = SwsVueRatingStar;
+
+createApp({
+  components: {
+    RatingStar,
+  },
+}).mount('#app');
 </script>
 ```
 
 
-### SFC
+### SFC (TypeScript)
 
 ```vue
 <template>
   <rating-star></rating-star>
 </template>
 
-<script>
+<script setup lang="ts">
 import RatingStar from '@inotom/vue-rating-star';
-
-export default {
-  components: {
-    RatingStar,
-  },
-}
 </script>
 ```
 
